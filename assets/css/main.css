@@ -144,22 +144,40 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: transparent;
+  /* background-color: rgba(4, 11, 20, 0.7); */
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: none;
-  backdrop-filter: blur(10px);
+  /* border-radius: 15px; */
+  /* box-shadow: none; */
+  /* backdrop-filter: blur(10px); */
   z-index: 997;
   transition: all ease-in-out 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+              inset 0 4px 20px rgba(255, 255, 255, 0.3);
 }
+
+/* .header::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  box-shadow: inset -10px -8px 0 -11px rgba(255, 255, 255, 1),
+              inset 0 -9px 0 -8px rgba(255, 255, 255, 1);
+  opacity: 0.6;
+} */
 
 .header .profile-img {
   display: none;
@@ -179,8 +197,18 @@ h6 {
   font-size: 28px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+
+  color: #149DDD;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background: none;
+  text-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(255, 255, 255, 0.3);
 }
+
+
+
 
 .header .social-links {
   margin: 15px auto;
@@ -268,7 +296,7 @@ h6 {
 
 .navmenu a,
 .navmenu a:focus {
-  color: var(--nav-color);
+  color: silver;
   padding: 10px 0; /* Reverted to original padding */
   font-family: var(--nav-font);
   font-size: 16px;
